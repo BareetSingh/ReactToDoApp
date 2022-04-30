@@ -8,6 +8,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
 
     const submitToDoHandler = (e) => {
         e.preventDefault();
+        if(inputText.trim()!=="")
         setTodos([
             ...todos,
             { text: inputText, completed: false, id: Math.random() * 1000 }
